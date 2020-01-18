@@ -1,333 +1,380 @@
 <!DOCTYPE HTML>
 <!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Read Only by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 
 <head>
-	<title>Epicuriouser</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+    <title>Epicuriouser</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
 <body class="is-preload">
 
-	<!-- Header -->
-	<section id="header">
-		<header>
-			<!-- <span class="image avatar"><img src="images/avatar.jpg" alt="" /></span> -->
-			<span class="image avatar"><img src="images/david-billings-NID5iadR7RE-unsplash.jpg" alt="" /></span>
-			<h1>Epicuriouser:<br>Can machine learning<br>accurately predict recipe ratings?</h1>
-			<!-- <h1 id="logo"><a href="#">Amy Koldeway<br>Sarah Cross</a></h1> -->
-			<p>Amy Koldeway<br>Sarah Cross</p>
-		</header>
-		<nav id="nav">
-			<ul>
-				<li><a href="#one" class="active">Project Summary</a></li>
-				<li><a href="#two">Data Preparation</a></li>
-				<li><a href="#three">Decision Tree & Random Forest</a></li>
-				<li><a href="#four">Regressions, KNN & SVM</a></li>
-				<li><a href="#five">Project Conclusion</a></li>
-				<li><a href="#six">Resources</a></li>
-			</ul>
-		</nav>
-		<footer>
-			<ul class="icons">
-				<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-				<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-			</ul>
-		</footer>
-	</section>
+    <!-- Header -->
+    <section id="header">
+        <header>
+            <!-- <span class="image avatar"><img src="images/avatar.jpg" alt="" /></span> -->
+            <span class="image avatar"><img src="images/david-billings-NID5iadR7RE-unsplash.jpg" alt="" /></span>
+            <h1>Epicuriouser:<br>Can machine learning<br>accurately predict recipe ratings?</h1>
+            <!-- <h1 id="logo"><a href="#">Amy Koldeway<br>Sarah Cross</a></h1> -->
+            <p>Amy Koldeway<br>Sarah Cross</p>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active">Project Summary</a></li>
+                <li><a href="#two">Data Preparation</a></li>
+                <li><a href="#three">Decision Tree & Random Forest</a></li>
+                <li><a href="#four">kNN</a></li>
+                <li><a href="#five">Project Conclusion</a></li>
+                <li><a href="#six">Resources</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <ul class="icons">
+                <!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+            </ul>
+        </footer>
+    </section>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-		<!-- Main -->
-		<div id="main">
+        <!-- Main -->
+        <div id="main">
 
-			<!-- One -->
-			<section id="one">
-				<div class="image main" data-position="center">
-					<!-- <img src="images/banner.jpg" alt="" /> -->
-					<img src="images/lily-banse--YHSwy6uqvk-unsplash.jpg" alt="" />
-					<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
-						href="https://unsplash.com/@lvnatikk?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
-						target="_blank" rel="noopener noreferrer"
-						title="Download free do whatever you want high-resolution photos from Lily Banse"><span
-							style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
-								style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white"
-								viewBox="0 0 32 32">
-								<title>unsplash-logo</title>
-								<path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
-							</svg></span><span style="display:inline-block;padding:2px 3px">Lily Banse</span></a>
-				</div>
-				<div class="container">
-					<header class="major">
-						<h2>Project Summary</h2>
-						<p>Can machine learning accurately predict recipe ratings?</p>
-					</header>
-					<p><b><a href="https://epi-plus.herokuapp.com/" target="_blank">Epicuriousity</a></b> is a site we
-						built to
-						analyze over 20,000 recipes scraped from the popular recipe site <a
-							href="https://www.epicurious.com/" target="_blank">epicurious</a>. With that project we
-						analyzed the popularity of recipes in relation to nutritional information,
-						number of ingredeints and categories. Part of that analysis reviewed 4 key features of our data
-						(calories, fat, protein, number of ingredients) to get a picture of how those features may have
-						impacted the star ratings. We called this the "epifactor".
-					</p>
-					<p>
-						<img src="images/epifactor.png" alt="" width="100%" /></p>
-					<p>With this project we introduce Epicuriouser - a project that applies machine learning models to
-						the Epicuriousity data to see if we can accurately predict recipe ratings. We chose a variety of
-						supervised machine learning models as we can test on existing data where recipe ratings are
-						known and measure accuracy of each model.
-					</p>
-				</div>
-			</section>
+            <!-- One -->
+            <section id="one">
+                <div class="image main" data-position="center">
+                    <!-- <img src="images/banner.jpg" alt="" /> -->
+                    <img src="images/lily-banse--YHSwy6uqvk-unsplash.jpg" alt="" />
+                    <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+                        href="https://unsplash.com/@lvnatikk?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+                        target="_blank" rel="noopener noreferrer"
+                        title="Download free do whatever you want high-resolution photos from Lily Banse"><span
+                            style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
+                                style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white"
+                                viewBox="0 0 32 32">
+                                <title>unsplash-logo</title>
+                                <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                            </svg></span><span style="display:inline-block;padding:2px 3px">Lily Banse</span></a>
+                </div>
+                <div class="container">
+                    <header class="major">
+                        <h2>Project Summary</h2>
+                        <p>Can machine learning accurately predict recipe ratings?</p>
+                    </header>
+                    <p><b><a href="https://epi-plus.herokuapp.com/" target="_blank">Epicuriousity</a></b> is a site we
+                        built to
+                        analyze over 20,000 recipes scraped from the popular recipe site <a
+                            href="https://www.epicurious.com/" target="_blank">epicurious</a>. With that project we
+                        analyzed the popularity of recipes in relation to nutritional information,
+                        number of ingredients and categories. Part of that analysis reviewed 4 key features of our data
+                        (calories, fat, protein, number of ingredients) to get a picture of how those features may have
+                        impacted the star ratings. We called this the "epifactor".
+                    </p>
+                    <p>
+                        <img src="images/epifactor.png" alt="" width="100%" /></p>
+                    <p>With this project we introduce Epicuriouser - a project that applies machine learning models to
+                        the Epicuriousity data to see if we can accurately predict recipe ratings. We chose a variety of
+                        supervised machine learning models as we can test on existing data where recipe ratings are
+                        known and measure accuracy of each model.
+                    </p>
+                </div>
+            </section>
 
-			<!-- Two -->
-			<section id="two">
-				<div class="container">
-					<h3>Data Preparation</h3>
-					<p>Our data set was scraped from the epicurious site and posted on <a
-							href="https://www.kaggle.com/hugodarwood/epirecipes" target="_blank">kaggle</a>. The data
-						set had over 20,000 recipes with ratings and nutritional information. We used the json format
-						and performed our own cleaning to prepare it for the models.</p>
-					<h4>Visualize Data</h4>
-					<img src="images/viz-data-1.png" alt="" width="100%" />
-					<img src="images/viz-data-2.png" alt="" width="100%" />
-					<div>
-						<ul>
-							<li>recipes without "0" ratings (approx. 10% data)</li>
-							<li>data is unbalanced when you compare the lower value rating groups against the higher
-								ones
-							</li>
-							<li>recipe data is consistent 2004 to 2016</li>
-							<li>ratings vs ratings scatter gives some clue to strangeness of data</li>
-							<ul>
-								<li>user input is 0 to 4 "forks", data range is 0 to 5</li>
-								<li>8 discrete rating buckets vs 10</li>
-							</ul>
+            <!-- Two -->
+            <section id="two">
+                <div class="container">
+                    <h3>Data Preparation</h3>
+                    <p>Our data set was scraped from the epicurious site and posted on <a
+                            href="https://www.kaggle.com/hugodarwood/epirecipes" target="_blank">kaggle</a>. The data
+                        set had over 20,000 recipes with ratings and nutritional information. We used the json format
+                        and performed our own cleaning to prepare it for the models.</p>
+                    <h4>Visualize Data</h4>
+                    <img src="images/viz-data-1.png" alt="" width="100%" />
+                    <img src="images/viz-data-2.png" alt="" width="100%" />
+                    <div>
+                        <ul>
+                            <li>recipes without "0" ratings (approx. 10% data)</li>
+                            <li>data is unbalanced when you compare the lower value rating groups against the higher
+                                ones
+                            </li>
+                            <li>recipe data is consistent 2004 to 2016</li>
+                            <li>ratings vs ratings scatter gives some clue to strangeness of data</li>
+                            <ul>
+                                <li>user input is 0 to 4 "forks", data range is 0 to 5</li>
+                                <li>8 discrete rating buckets vs 10</li>
+                            </ul>
 
-						</ul>
-					</div>
-					<br>
-					<h4>Visualize Features</h4>
-					<img src="images/viz-data-3.png" alt="" width="100%" />
-					<div>
-						<ul>
-							<li>calories and sodium have a significant number of outliers</li>
-							<ul>
-								<li>nutritional information is auto generated by a third party</li>
-								<li>seems likely that user error created these large value outliers for each feature
-								</li>
-							</ul>
-							<li>features are different orders of magnitude (normalize, standardize, min/max scalar)</li>
-							<li>all features have zero values, nutritional information is expected to be non-zero</li>
-							<li>there are 21,000 ratings and 16,000 feature data points</li>
-							<li>Data cut-off points based on visual inspection (per serving)</li>
-							<ul>
-								<li>calories: 10,000</li>
-								<li>fat: 2,000</li>
-								<li>protein: 2,000</li>
-								<li>sodium: 2,000</li>
-							</ul>
-						</ul>
-					</div>
-					<br>
-					<h4>Clean, Prepare and Manipulate Data</h4>
-					<img src="images/viz-data-4.png" alt="" width="100%" />
+                        </ul>
+                    </div>
+                    <br>
+                    <h4>Visualize Features</h4>
+                    <img src="images/viz-data-3.png" alt="" width="100%" />
+                    <div>
+                        <ul>
+                            <li>calories and sodium have a significant number of outliers</li>
+                            <ul>
+                                <li>nutritional information is auto generated by a third party</li>
+                                <li>seems likely that user error created these large value outliers for each feature
+                                </li>
+                            </ul>
+                            <li>features are different orders of magnitude (normalize, standardize, min/max scalar)</li>
+                            <li>all features have zero values; nutritional information is expected to be non-zero</li>
+                            <li>there are 21,000 ratings and 16,000 feature data points</li>
+                            <li>Data cut-off points based on visual inspection (per serving)</li>
+                            <ul>
+                                <li>calories: 10,000</li>
+                                <li>fat: 2,000</li>
+                                <li>protein: 2,000</li>
+                                <li>sodium: 2,000</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <br>
+                    <h4>Clean, Prepare and Manipulate Data</h4>
+                    <img src="images/viz-data-4.png" alt="" width="100%" />
 
-					<h3>Train & Test Data</h3>
-					<p>We defined the features of the data set as: calories, fat, protein, sodium, # of ingredients, #
-						of tags, and age. We split the data set into 70% training and 30% testing. We set the stratify
-						parameter to ensure equal distribution of the classfications.</p>
-					<img src="images/train-test-data.png" alt="" width="100%" />
-					<p>This train and test data set was used in all the initial model evaluations. Any refinements made
-						to data to import model accuracy will be discussed with each model.</p>
-				</div>
-			</section>
+                    <h3>Train & Test Data</h3>
+                    <p>We defined the features of the data set as: calories, fat, protein, sodium, # of ingredients, #
+                        of tags, and age. We split the data set into 70% training and 30% testing. We set the stratify
+                        parameter to ensure equal distribution of the classifications.</p>
+                    <img src="images/train-test-data.png" alt="" width="100%" />
+                    <p>This train and test data set was used in all the initial model evaluations. Any refinements made
+                        to data to import model accuracy will be discussed with each model.</p>
+                </div>
+            </section>
 
-			<!-- Three -->
-			<section id="three">
-				<div class="container">
-					<h3>Decision Tree & Random Forest</h3>
-					<p>Decision trees and random forests (groups of decision trees) are commonly used to solve
-						classification problems. </p>
-					<h4>Decision Tree</h4>
-					<p>
-						We first began with a single decision tree and for this model we
-						limited the max depth to 4 for easy visualization.</p>
-					<img src="images/class-report-dt.png" alt="" width="60%" />
-					<p>
-						Our decision tree has an accuracy just shy of 48%. This is quite poor. The classifiation report
-						shows we
-						only had predictions for 3.0, 3.5 and 4.0 star ratings. We'll dig deeper into classification
-						report with our random forest model, but with a single tree we can see the choices made in a
-						visualization of the tree.
-					</p>
-					<img src="images/decision-tree-viz.png" alt="" width="100%" />
-					<br>
-					<h4>Random Forest</h4>
-					<p>To increase accuracy, we next used a random foest model. Rather than a single decision tree, our
-						model used 100 trees to predict recipe ratings. With this model, our average maximum depth for
-						the trees was 33 and it used 4,196 nodes on average. </p>
-					<img src="images/class-report-rf.png" alt="" width="60%" />
-					<p>Our accuracy using the random forest model increased to 51%. A slight increase - let's plot a
-						confusion matrix to help illustrate the classification report.</p>
-					<img src="images/matrix-rf.png" alt="" width="60%" />
+            <!-- Three -->
+            <section id="three">
+                <div class="container">
+                    <h3>Decision Tree & Random Forest</h3>
+                    <p>Decision trees and random forests (groups of decision trees) are commonly used to solve
+                        classification problems. </p>
+                    <h4>Decision Tree</h4>
+                    <p>
+                        We first began with a single decision tree and for this model we
+                        limited the max depth to 4 for easy visualization.</p>
+                    <img src="images/class-report-dt.png" alt="" width="60%" />
+                    <p>
+                        Our decision tree has an accuracy just shy of 48%. This is quite poor. The classification reports
+                        shows we
+                        only had predictions for 3.0, 3.5 and 4.0 star ratings. We'll dig deeper into classification
+                        report with our random forest model, but with a single tree we can see the choices made in a
+                        visualization of the tree.
+                    </p>
+                    <img src="images/decision-tree-viz.png" alt="" width="100%" />
+                    <br>
+                    <h4>Random Forest</h4>
+                    <p>To increase accuracy, we next used a random forest model. Rather than a single decision tree, our
+                        model used 100 trees to predict recipe ratings. With this model, our average maximum depth for
+                        the trees was 33 and it used 4,196 nodes on average. </p>
+                    <img src="images/class-report-rf.png" alt="" width="60%" />
+                    <p>Our accuracy using the random forest model increased to 51%. A slight increase - let's plot a
+                        confusion matrix to help illustrate the classification report.</p>
+                    <img src="images/matrix-rf.png" alt="" width="60%" />
 
-					<p>
-						Precision is a measure of recipes predicted correctly compared to the total number of actual
-						ratings. The classification report shows the model has the best precision predicting 3.5 star
-						recipes (78%) with poor to extremely poor precision predicting other star ratings (6%-42%). The
-						matrix shows 971 recipes were predicted 3.5 stars correctly out of a total of 1,250 actual 3.5
-						star recipes. The worst precision was 2 star recipes with only 4 out of 71 predicted correctly.
-					</p>
-					<p>
-						Recall is a measure of recipes predicted correctly compared to the total number of all predicted
-						ratings. The classification report shows higher recall for 1, 2 and 2.5 star ratings than the
-						others. Once again referring to the matrix, we see 2 star ratings had 4 recipes predicted
-						correctly out of a total of 6 predictions while the 3.5 star ratings had 977 predicted correctly
-						out of 1,835 predictions.
-					</p>
-					<p>
-						The F score represents the mean average of both precision and recall in the model. The support
-						values represent the total number of recipes predicted for each star rating.
-					</p>
-					<p>
-						The classification report really shows how our imbalanced data affected the accuracy of the
-						model. Classifications with a higher number of records had better precision scores while those
-						with lower numbers had better recall scores. The best f-score of the bunch was for 3.5 star
-						ratings (63%) which is fairly poor. Revisions to the model will address the imbalance of data.
-					</p>
-					<h5>Feature Importance</h5>
-					<p>
-						Let's quantify the usefullness of the features provided by reviewing their relative importance
-						in predicting values. This model found sodium and calories to be the most important features
-						when predicting star ratings however the measures are similar across all features.
-					</p>
-					<img src="images/feature-importance-rf.png" alt="" width="70%" />
-					<h3>Improve Random Forest Model</h3>
-					<p>The dataset is quite imbalanced so in an effort to improve our random forest model, we will apply
-						an oversampling and undersampling technique and compare results to see how they affected the
-						model.</p>
-					<h4>SMOTE (Synthetic Minority Over-sampling Technique)</h4>
-					<p>SMOTE is an oversampling technique that creates synthetic samples of miniority classes. In our
-						data, we have far more 3.5 star rated recipes others with very few 1.5 and 1 star ratings. We'll
-						use SMOTE to bring the number of recipes for all classifictions up to the number of recipes with
-						3.5 stars which is 2,915.</p>
-					<img src="images/train-after-smote.png" alt="" width="100%" />
-					<p>After applying SMOTE to upsample our data, we find the accuracy was reduced to 43%. 1 and 1.5
-						star ratings had the largest improvement of F1 scores</p>
-					<img src="images/class-report-smt.png" alt="" width="85%" />
-					<h4>Near Miss</h4>
-					<p>NearMiss is an undersampling technique that will make the majority class equal to the minority
-						class. In our data, it will reduce the number of star recipes to be closer to the 1, 1.5 and 2
-						star ratings (24 records)</p>
-					<img src="images/train-after-nearmiss.png" alt="" width="100%" />
-					<p>The near miss model drastically dropped our accuracy to just 3%. The smaller sample sizes really
-						impacted the predictions.</p>
-					<img src="images/class-report-nm.png" alt="" width="85%" />
-					<h3>Comparing Decision Tree and Random Forest Results</h3>
-					<p>Now that we're through all the data part, let's plot our results and have a nice visualization of
-						how each model has affected accuracy.</p>
-					<img src="images/viz-rf-results-accuracy.png" alt="" width="70%" />
-					<p>The original random forest model had the best accuracy at 51%. The single decision tree was
-						second at 48% followed by SMOTE at 43%. Near Miss had the worse accuracy score at 3%. Plotting
-						the Precision, Recall
-						and F1-Score for each star we easily visualize how each model affected those measures.</p>
+                    <p>
+                        Precision is a measure of recipes predicted correctly compared to the total number of actual
+                        ratings. The classification report shows the model has the best precision predicting 3.5 star
+                        recipes (78%) with poor to extremely poor precision predicting other star ratings (6%-42%). The
+                        matrix shows 971 recipes were predicted 3.5 stars correctly out of a total of 1,250 actual 3.5
+                        star recipes. The worst precision was 2 star recipes with only 4 out of 71 predicted correctly.
+                    </p>
+                    <p>
+                        Recall is a measure of recipes predicted correctly compared to the total number of all predicted
+                        ratings. The classification report shows higher recall for 1, 2 and 2.5 star ratings than the
+                        others. Once again referring to the matrix, we see 2 star ratings had 4 recipes predicted
+                        correctly out of a total of 6 predictions while the 3.5 star ratings had 977 predicted correctly
+                        out of 1,835 predictions.
+                    </p>
+                    <p>
+                        The F score represents the mean average of both precision and recall in the model. The support
+                        values represent the total number of recipes predicted for each star rating.
+                    </p>
+                    <p>
+                        The classification report really shows how our imbalanced data affected the accuracy of the
+                        model. Classifications with a higher number of records had better precision scores while those
+                        with lower numbers had better recall scores. The best f-score of the bunch was for 3.5 star
+                        ratings (63%) which is fairly poor. Revisions to the model will address the imbalance of data.
+                    </p>
+                    <h5>Feature Importance</h5>
+                    <p>
+                        Let's quantify the usefulness of the features provided by reviewing their relative importance
+                        in predicting values. This model found sodium and calories to be the most important features
+                        when predicting star ratings however the measures are similar across all features.
+                    </p>
+                    <img src="images/feature-importance-rf.png" alt="" width="70%" />
+                    <h3>Improve Random Forest Model</h3>
+                    <p>The dataset is quite imbalanced so in an effort to improve our random forest model, we will apply
+                        an oversampling and under sampling technique and compare results to see how they affected the
+                        model.</p>
+                    <h4>SMOTE (Synthetic Minority Over-sampling Technique)</h4>
+                    <p>SMOTE is an oversampling technique that creates synthetic samples of minority classes. In our
+                        data, we have far more 3.5 star rated recipes others with very few 1.5 and 1 star ratings. We'll
+                        use SMOTE to bring the number of recipes for all classifictions up to the number of recipes with
+                        3.5 stars which is 2,915.</p>
+                    <img src="images/train-after-smote.png" alt="" width="100%" />
+                    <p>After applying SMOTE to upsample our data, we find the accuracy was reduced to 43%. 1 and 1.5
+                        star ratings had the largest improvement of F1 scores</p>
+                    <img src="images/class-report-smt.png" alt="" width="85%" />
+                    <h4>Near Miss</h4>
+                    <p>NearMiss is an undersampling technique that will make the majority class equal to the minority
+                        class. In our data, it will reduce the number of star recipes to be closer to the 1, 1.5 and 2
+                        star ratings (24 records)</p>
+                    <img src="images/train-after-nearmiss.png" alt="" width="100%" />
+                    <p>The near miss model drastically dropped our accuracy to just 3%. The smaller sample sizes really
+                        impacted the predictions.</p>
+                    <img src="images/class-report-nm.png" alt="" width="85%" />
+                    <h3>Comparing Decision Tree and Random Forest Results</h3>
+                    <p>Now that we're through all the data part, let's plot our results and have a nice visualization of
+                        how each model has affected accuracy.</p>
+                    <img src="images/viz-rf-results-accuracy.png" alt="" width="70%" />
+                    <p>The original random forest model had the best accuracy at 51%. The single decision tree was
+                        second at 48% followed by SMOTE at 43%. Near Miss had the worse accuracy score at 3%. Plotting
+                        the Precision, Recall
+                        and F1-Score for each star we easily visualize how each model affected those measures.</p>
 
-					<img src="images/viz-rf-results-stars.png" alt="" width="100%" />
-					<p>
-						<ul>
-							<li>Decision Tree doesn't produce any results for ratings between 1 - 2.5 stars as no data
-								was found for those ratings.</li>
-							<li>Random Forest has high recall scores for 1-2.5 star recipes with very low precision.
-								Precision is high for 3.5 stars. This shows how our imbalanced data affected those
-								measures.</li>
-							<li>SMOTE did a much better job keeping all measures fairly even and tuning down the recall
-								from random forest for lower ratings however it did reduce the overall measures and F1
-								scores.</li>
-							<li>Near Miss was poor across the board</li>
-						</ul>
-					</p>
-					<p>Attempts made by SMOTE and Near Miss to balance our data produced less accurate models than the
-						random forest. Random forest proved decent and correctly predicting 3.5 star ratings with 78%
-						precision, the f1-score was only 63%.</p>
-					<p>If we cared more about precision than recall, the random forest would be the best model for
-						mediocre predictions of recipes with 3.5 stars. All in all it seems none of the decision tree
-						models are effective at accurately prediction recipe ratings.</p>
-				</div>
-			</section>
+                    <img src="images/viz-rf-results-stars.png" alt="" width="100%" />
+                    <p>
+                        <ul>
+                            <li>Decision Tree doesn't produce any results for ratings between 1 - 2.5 stars as no data
+                                was found for those ratings.</li>
+                            <li>Random Forest has high recall scores for 1-2.5 star recipes with very low precision.
+                                Precision is high for 3.5 stars. This shows how our imbalanced data affected those
+                                measures.</li>
+                            <li>SMOTE did a much better job keeping all measures fairly even and tuning down the recall
+                                from random forest for lower ratings however it did reduce the overall measures and F1
+                                scores.</li>
+                            <li>Near Miss was poor across the board</li>
+                        </ul>
+                    </p>
+                    <p>Attempts made by SMOTE and Near Miss to balance our data produced less accurate models than the
+                        random forest. Random forest proved decent and correctly predicting 3.5 star ratings with 78%
+                        precision, the f1-score was only 63%.</p>
+                    <p>If we cared more about precision than recall, the random forest would be the best model for
+                        mediocre predictions of recipes with 3.5 stars. All in all it seems none of the decision tree
+                        models are effective at accurately prediction recipe ratings.</p>
+                </div>
+            </section>
 
-			<!-- Four -->
-			<section id="four">
-				<div class="container">
-					<h3>Model: Logistic Regression</h3>
-					<p>Sarah's cool stuff for all the jazz she did.</p>
+<!-- Four-->
+<section id="four">
+    <div class="container">
+        <h3>k Nearest Neighbors</h3>
 
-				</div>
-			</section>
+        <ul>
+			<li>kNN is Supervised classification algorithm </li>
+			<li>‘k’ in KNN is a parameter that refers to the number of nearest neighbours to include in the majority of the voting process </li>
+            <li>Model representation for KNN is the entire training dataset </li>
+            <li>KNN performs well with all data on same scale, Normalizing data to range [0, 1] </li>
+            <li>Features with high magnitudes will weight more than features with low magnitudes </li>
+            <li>Address missing data (this is how kNN calcs the distance) </li>
+            <li>Exclude or impute missing values </li>
+            <li>kNN performs well with lower dimensionality </li>
+        </ul>
 
-			<!-- Five -->
-			<section id="five">
-				<div class="container">
-					<h3>Project Conclusion</h3>
-					<img src="images/thought-catalog-fnztlIb52gU-unsplash.jpg" alt="" width="100%" />
-					<p>*sad trombone*</p>
-					<p>Despite our best efforts, we were unable to find a model that could predict recipe ratings with
-						any accuracy.</p>
-					<p>We hit a few hurdles along the way that may explain why but we believe it was mainly due to our
-						imablanced dataset and limited features. We'd like to try this again by scraping the data
-						ourselves and pull many more features into our data like additional nutritional information,
-						dish type (breakfast, dinner, dessert, etc.), cuisine, dietary concerns (vegetarian, keto, low
-						fat, etc.) # of ratings, and holiday tags. With more data we could fine-tune features and see if
-						that increases accuracy.
-					</p>
-				</div>
-			</section>
-			<!-- Six -->
-			<section id="six">
-				<div class="container">
-					<h3>Resources</h3>
-					<ul>
-						<li><a href="https://epi-plus.herokuapp.com/" target="_blank">Epicuriousity (Project 2)</a></li>
-						<li><a href="https://www.kaggle.com/hugodarwood/epirecipes" target="_blank">Epicurious dataset on Kaggle</a></li>
-						<li><a href="ML-RandomForestScript.html" target="_blank">Decision Tree & Random Forest Jupyter Notebook code</a></li>
-					</ul>
+		<h4>Split Training & Test Set</h4>
+		<ul>
+            <li>70% training and 30% test</li>
+            <li>Random State = 1 (Same as Decision Tree and Random Forest)</li>
+            <li>(Same percentage of samples of each target class as the complete set)</li>
+            <li>Stratified data (Same percentage of samples of each target class as the complete set)</li>
+            <li>Address missing data (this is how kNN calcs the distance) </li>
+            <li>Exclude or impute missing values </li>
+            <li>kNN performs well with lower dimensionality </li>
+		</ul>
+		
+		<h4>Feature Selection & Pre-Processing</h4>
+		<ul>
+			<li>kBest: univariate feature selection with F-test for feature scoring</li>
+			<li>Note: the two most important features are ones we added from exiting data. This might be a cluethat pre4dicting off nutrictional data is not going to work.</li>
 
-				</div>
-			</section>
-			
+			<img src="images/feature_selection.png" alt="" width="100%" />
+            <li>Label Encoderfor: fit label training and test data</li>
+            <li>Min/Max Scalar: reduces values in feature range to 0 to 1</li>
+		</ul>
 
-		</div>
+		<h4>Fit, Cross-Validate & Predict</h4>
+		<ul>
+			<li>Ran the kNN (Classifier) model over k range from 1 to 200</li>
+            <li>Cross-Validated model with k=10</li>
+		</ul>
 
-		<!-- Footer -->
-		<section id="footer">
-			<div class="container">
-				<ul class="copyright">
-					<li>&copy; Untitled. All rights reserved.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</section>
+		<h4>Evaluate Model Performance</h4>
 
-	</div>
+		<img src="images/kNN_Accuracy.png" alt="" width="60%" />
+		<img src="images/kNN_Accuracy_Univariate.png" alt="" width="60%" />
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+		<img src="images/kNN_Matrix.png" alt="" width="60%" />
+		<img src="images/kNN_Matrix_Univariate.png" alt="" width="60%" />
+
+    </div>
+</section>
+
+            <!-- Five -->
+            <section id="five">
+                <div class="container">
+                    <h3>Project Conclusion</h3>
+                    <img src="images/thought-catalog-fnztlIb52gU-unsplash.jpg" alt="" width="100%" />
+                    <p>*sad trombone*</p>
+                    <p>Despite our best efforts, we were unable to find a model that could predict recipe ratings with
+                        any accuracy.</p>
+                    <p>We hit a few hurdles along the way that may explain why but we believe it was mainly due to our
+                        imbalanced dataset and limited features. We'd like to try this again by scraping the data
+                        ourselves and pull many more features into our data like additional nutritional information,
+                        dish type (breakfast, dinner, dessert, etc.), cuisine, dietary concerns (vegetarian, keto, low
+                        fat, etc.) # of ratings, and holiday tags. With more data we could fine-tune features and see if
+                        that increases accuracy.
+                    </p>
+                </div>
+            </section>
+            <!-- Six -->
+            <section id="six">
+                <div class="container">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://epi-plus.herokuapp.com/" target="_blank">Epicuriousity (Project 2)</a></li>
+                        <li><a href="https://www.kaggle.com/hugodarwood/epirecipes" target="_blank">Epicurious dataset on Kaggle</a></li>
+                        <li><a href="" target="_blank">Data Cleaning Jupyter Notebook</a></li>
+                        <li><a href="ML-RandomForestScript.html" target="_blank">Decision Tree & Random Forest Jupyter Notebook code</a></li>
+                        <li><a href="" target="_blank">kNN Jupyter Notebook</a></li>
+                    </ul>
+
+                </div>
+            </section>
+            
+
+        </div>
+
+        <!-- Footer -->
+        <section id="footer">
+            <div class="container">
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 
