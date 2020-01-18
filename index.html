@@ -165,7 +165,8 @@
                         limited the max depth to 4 for easy visualization.</p>
                     <img src="images/class-report-dt.png" alt="" width="60%" />
                     <p>
-                        Our decision tree has an accuracy just shy of 48%. This is quite poor. The classification reports
+                        Our decision tree has an accuracy just shy of 48%. This is quite poor. The classification
+                        reports
                         shows we
                         only had predictions for 3.0, 3.5 and 4.0 star ratings. We'll dig deeper into classification
                         report with our random forest model, but with a single tree we can see the choices made in a
@@ -266,68 +267,68 @@
                 </div>
             </section>
 
-<!-- Four-->
-<section id="four">
-    <div class="container">
-        <h3>k Nearest Neighbors</h3>
-        <p></p>
+            <!-- Four-->
+            <section id="four">
+                <div class="container">
+                    <h3>k Nearest Neighbors</h3>
+                    <p></p>
 
-        <ul>
-			<li>kNN is Supervised classification algorithm </li>
-			<li>‘k’ in KNN is a parameter that refers to the number of nearest neighbours to include in the majority of the voting process </li>
-            <li>Model representation for KNN is the entire training dataset </li>
-            <li>KNN performs well with all data on same scale, Normalizing data to range [0, 1] </li>
-            <li>Features with high magnitudes will weight more than features with low magnitudes </li>
-            <li>Address missing data (this is how kNN calcs the distance) </li>
-            <li>Exclude or impute missing values </li>
-            <li>kNN performs well with lower dimensionality </li>
-        </ul>
-        <p>" "</p>
-        <h4>Split Training & Test Set</h4>
-        <p>" "</p>
-		<ul>
-            <li>70% training and 30% test</li>
-            <li>Random State = 1 (Same as Decision Tree and Random Forest)</li>
-            <li>(Same percentage of samples of each target class as the complete set)</li>
-            <li>Stratified data (Same percentage of samples of each target class as the complete set)</li>
-            <li>Address missing data (this is how kNN calcs the distance) </li>
-            <li>Exclude or impute missing values </li>
-            <li>kNN performs well with lower dimensionality </li>
-		</ul>
-		<p>" "</p>
-        <h4>Feature Selection & Pre-Processing</h4>
-        <p>" "</p>
-		<ul>
-			<li>kBest: univariate feature selection with F-test for feature scoring</li>
-			<li>Note: the two most important features are ones we added from existing data. This might be a clue that pre4dicting off nutritional data is not going to work.</li>
+                    <ul>
+                        <li>kNN is Supervised classification algorithm </li>
+                        <li>‘k’ in KNN is a parameter that refers to the number of nearest neighbours to include in the
+                            majority of the voting process </li>
+                        <li>Model representation for KNN is the entire training dataset </li>
+                        <li>KNN performs well with all data on same scale, Normalizing data to range [0, 1] </li>
+                        <li>Features with high magnitudes will weight more than features with low magnitudes </li>
+                        <li>Address missing data (this is how kNN calcs the distance) </li>
+                        <li>Exclude or impute missing values </li>
+                        <li>kNN performs well with lower dimensionality </li>
+                    </ul>
+                    <p> </p>
+                    <h4>Split Training & Test Set</h4>
+                    <p> </p>
+                    <ul>
+                        <li>70% training and 30% test</li>
+                        <li>Random State = 1 (Same as Decision Tree and Random Forest)</li>
+                        <li>(Same percentage of samples of each target class as the complete set)</li>
+                        <li>Stratified data (Same percentage of samples of each target class as the complete set)</li>
+                        <li>Address missing data (this is how kNN calcs the distance) </li>
+                        <li>Exclude or impute missing values </li>
+                        <li>kNN performs well with lower dimensionality </li>
+                    </ul>
+                    <p> </p>
+                    <h4>Feature Selection & Pre-Processing</h4>
+                    <p> </p>
+                    <ul>
+                        <li>kBest: univariate feature selection with F-test for feature scoring</li>
+                        <li>Note: the two most important features are ones we added from existing data. This might be a
+                            clue that pre4dicting off nutritional data is not going to work.</li>
 
-			<img src="images/feature_selection.png" alt="" width="100%" />
-            <li>Label Encoderfor: fit label training and test data</li>
-            <li>Min/Max Scalar: reduces values in feature range to 0 to 1</li>
-		</ul>
-        <p>" "</p>
-        <h4>Fit, Cross-Validate & Predict</h4>
-        <p>" "</p>
-		<ul>
-			<li>Ran the kNN (Classifier) model over k range from 1 to 200</li>
-            <li>Cross-Validated model with k=10</li>
-		</ul>
-        <p>" "</p>
-		<h4>Evaluate Model Performance</h4>
-        <p>" "</p>
-        <img src="images/kNN_Accuracy.png" alt="" width="60%" />
-        <p>" "</p>
-        <p>" "</p>
-		<img src="images/kNN_Accuracy_Univariate.png" alt="" width="60%" />
-        <p>" "</p>
-        <p>" "</p>
-        <img src="images/kNN_Matrix.png" alt="" width="60%" />
-        <p>" "</p>
-        <p>" "</p>
-		<img src="images/kNN_Matrix_Univariate.png" alt="" width="60%" />
+                        <img src="images/feature_selection.png" alt="" width="100%" />
+                        <li>Label Encoderfor: fit label training and test data</li>
+                        <li>Min/Max Scalar: reduces values in feature range to 0 to 1</li>
+                    </ul>
+                    <p> </p>
+                    <h4>Fit, Cross-Validate & Predict</h4>
+                    <p> </p>
+                    <ul>
+                        <li>Ran the kNN (Classifier) model over k range from 1 to 200</li>
+                        <li>Cross-Validated model with k=10</li>
+                    </ul>
+                    <p> </p>
+                    <h4>Evaluate Model Performance</h4>
+                    <p> </p>
+                    <img src="images/kNN_Accuracy.png" alt="" width="60%" />
+                    <p> </p>
+                    <img src="images/kNN_Accuracy_Univariate.png" alt="" width="60%" />
+                    <p> </p>
+                    <img src="images/kNN_Matrix.png" alt="" width="60%" />
+                    <p> </p>
 
-    </div>
-</section>
+                    <img src="images/kNN_Matrix_Univariate.png" alt="" width="60%" />
+
+                </div>
+            </section>
 
             <!-- Five -->
             <section id="five">
@@ -352,15 +353,17 @@
                     <h3>Resources</h3>
                     <ul>
                         <li><a href="https://epi-plus.herokuapp.com/" target="_blank">Epicuriousity (Project 2)</a></li>
-                        <li><a href="https://www.kaggle.com/hugodarwood/epirecipes" target="_blank">Epicurious dataset on Kaggle</a></li>
+                        <li><a href="https://www.kaggle.com/hugodarwood/epirecipes" target="_blank">Epicurious dataset
+                                on Kaggle</a></li>
                         <li><a href="" target="_blank">Data Cleaning Jupyter Notebook</a></li>
-                        <li><a href="ML-RandomForestScript.html" target="_blank">Decision Tree & Random Forest Jupyter Notebook code</a></li>
+                        <li><a href="ML-RandomForestScript.html" target="_blank">Decision Tree & Random Forest Jupyter
+                                Notebook code</a></li>
                         <li><a href="" target="_blank">kNN Jupyter Notebook</a></li>
                     </ul>
 
                 </div>
             </section>
-            
+
 
         </div>
 
